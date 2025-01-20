@@ -16,8 +16,8 @@ spec:
     spec:
       containers:
         - name: k8s-user-app
-          image: wansookim93/k8s-user:v0.0.1      # dockerhub image repository : repo/image명:Tag
-          imagePullPolicy: IfNotPresent        # k8s 클러스터에 다운로드 된 이미지 없으면 다운 or Always
+          image: wansookim93/k8s-user:v0.0.2      # dockerhub image repository : repo/image명:Tag
+          imagePullPolicy: Always        # k8s 클러스터에 다운로드 된 이미지 없으면 다운 or Always
           ports:
             - name: http
               containerPort: 8080              # demo.jar 실행 포트
