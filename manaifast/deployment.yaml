@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: k8s-user-deployment
-  namespace: 
+  namespace: edu-user
 spec:
   selector:
     matchLabels:
