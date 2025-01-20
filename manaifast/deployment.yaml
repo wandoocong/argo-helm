@@ -33,7 +33,7 @@ spec:
             - name: SPRING_PROFILES_ACTIVE     # spring profile 설정
               value: prod                      # 상용(prod) 환경
             - name: API_URL
-              valuefrom:
+              valueFrom:
                 configMapKeyRef:
                   name: external-api-config
                   key: api.url
