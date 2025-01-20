@@ -5,13 +5,13 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: "k8s.211.253.25.128.sslip.io"
+    - host: "k8s.211.254.212.176.sslip.io"
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: k8s-edu-service
+                name: k8s-user-service
                 port:
                   number: 80
