@@ -8,7 +8,6 @@ spec:
   selector:
     matchLabels:
       app: k8s-good-app
-  replicas: 1
   template:
     metadata:
       labels:
