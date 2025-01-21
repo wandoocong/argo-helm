@@ -38,7 +38,8 @@ spec:
                   name: external-api-config
                   key: api.url
       imagePullSecrets:                        # dockerhub 이미지 pull 위한 secret
-        - name: k8s-edu-dockerhub-secret
+        - name: k8s-edu-dockerhub-secret-user
+        - namespace: edu-user
       #nodeSelector:                            # pod가 실행 될 node 설정
         #kubernetes.io/hostname: worker01
         
