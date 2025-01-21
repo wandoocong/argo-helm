@@ -39,5 +39,26 @@ spec:
                   key: api.url
       imagePullSecrets:                        # dockerhub 이미지 pull 위한 secret
         - name: k8s-edu-dockerhub-secret
-      nodeSelector:                            # pod가 실행 될 node 설정
-        kubernetes.io/hostname: worker01
+      #nodeSelector:                            # pod가 실행 될 node 설정
+        #kubernetes.io/hostname: worker01
+        
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: k8s-user-hpa
+  namespace: edu-user
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: k8s-user-deployment
+  minReplicas: 2
+  maxReplicas: 4
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 30
