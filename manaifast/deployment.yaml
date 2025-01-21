@@ -7,7 +7,6 @@ spec:
   selector:
     matchLabels:
       app: k8s-user-app
-  replicas: 1
   template:
     metadata:
       labels:
