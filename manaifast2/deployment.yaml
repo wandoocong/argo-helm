@@ -40,7 +40,8 @@ spec:
             initialDelaySeconds: 10
             periodSeconds: 5
       imagePullSecrets:                        # dockerhub 이미지 pull 위한 secret
-        - name: k8s-edu-dockerhub-secret
+        - name: k8s-edu-dockerhub-secret-goods
+        - namespace: edu-goods
       #nodeSelector:                            # pod가 실행 될 node 설정
         #kubernetes.io/hostname: worker01
 
