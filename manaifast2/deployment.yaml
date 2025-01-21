@@ -37,7 +37,7 @@ spec:
             httpGet:
               path: /
               port: 8080
-            initialDelaySeconds: 10
+            initialDelaySeconds: 5
             periodSeconds: 5
       imagePullSecrets:                        # dockerhub 이미지 pull 위한 secret
         - name: k8s-edu-dockerhub-secret
