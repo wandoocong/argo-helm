@@ -35,7 +35,7 @@ spec:
               valueFrom:
                 configMapKeyRef:
                   name: external-api-config
-                  key: api.url
+                  key: API_URL
       imagePullSecrets:                        # dockerhub 이미지 pull 위한 secret
         - name: k8s-edu-dockerhub-secret
       #nodeSelector:                            # pod가 실행 될 node 설정
